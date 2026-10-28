@@ -1,0 +1,126 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="蜀韵·成都 —— 雪山下的公园城市，烟火里的幸福成都。文化旅游宣传网站。">
+  <title>蜀韵·成都 | 首页</title>
+  <!-- 全局样式表 -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="home">
+
+  <!-- ======================= Header 固定吸顶导航 ======================= -->
+  <header class="site-header" id="siteHeader">
+    <div class="container header-inner">
+      <!-- 金色 Logo -->
+      <a href="index.html" class="logo">
+        <span class="logo-badge">蜀</span>
+        <span>蜀韵·成都</span>
+      </a>
+      <!-- 导航栏 -->
+      <nav class="nav">
+        <a href="index.html" class="nav-link active">首页</a>
+        <a href="food.html" class="nav-link">美食</a>
+        <a href="sights.html" class="nav-link">景点</a>
+        <a href="culture.html" class="nav-link">文化</a>
+        <a href="travel.html" class="nav-link">攻略</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ======================= 全屏轮播 Banner ======================= -->
+  <section class="banner" id="banner">
+    <!-- 三张轮播图（CSS 背景图引入，保证铺满不变形） -->
+    <div class="banner-slide s1 active"></div>
+    <div class="banner-slide s2"></div>
+    <div class="banner-slide s3"></div>
+    <!-- 半透明遮罩 -->
+    <div class="banner-mask"></div>
+
+    <!-- 居中主文案 -->
+    <div class="banner-content">
+      <p class="slogan">—— 天府之国 · 美食之都 ——</p>
+      <h1>雪山下的公园城市<span class="b-gold"><br>烟火里的幸福成都</span></h1>
+      <p class="b-desc">一座来了就不想离开的城市，正等你踏香而来</p>
+      <a href="travel.html" class="btn-banner">即刻出发</a>
+    </div>
+
+    <!-- 左右切换箭头 -->
+    <button type="button" class="banner-arrow prev" id="bannerPrev" aria-label="上一张">‹</button>
+    <button type="button" class="banner-arrow next" id="bannerNext" aria-label="下一张">›</button>
+
+    <!-- 轮播圆点指示器 -->
+    <div class="banner-dots" id="bannerDots">
+      <span class="dot active" data-index="0"></span>
+      <span class="dot" data-index="1"></span>
+      <span class="dot" data-index="2"></span>
+    </div>
+
+    <!-- 向下滚动提示 -->
+    <p class="banner-scroll">▼ 向下滚动</p>
+  </section>
+
+  <!-- ======================= 视频 + 城市简介 ======================= -->
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title">遇见成都<span class="en">Meet Chengdu</span></h2>
+      <div class="gold-divider"></div>
+
+      <!-- Flexbox 两栏：左视频 / 右文字 -->
+      <div class="video-intro">
+        <!-- 左侧：宣传视频 -->
+        <div class="video-wrap reveal">
+          <video src="./cd1.mp4" controls width="100%"></video>
+        </div>
+        <!-- 右侧：城市介绍（约 300 字，首行缩进） -->
+        <div class="intro-text reveal">
+          <h2>雪山下的公园城市</h2>
+          <p>成都，别称蓉城、锦官城，是四川省省会，一座有着三千多年建城史的古都，也是古蜀文明的重要发祥地。李白曾叹“九天开出一成都，万户千门入画图”；杜甫旅居于此，写下了“晓看红湿处，花重锦官城”的千古名句。</p>
+          <p>这里既有都江堰的千年水韵，又有金沙遗址的神秘辉煌；既有武侯祠的三国风云，又有宽窄巷子的市井烟火。清晨，一碗热气腾腾的担担面唤醒慵懒的胃；午后，盖碗茶香氤氲在老茶馆的竹椅间；入夜，火锅的麻辣鲜香与川剧的高腔一同升腾。</p>
+          <p>憨态可掬的大熊猫、巧夺天工的蜀锦、麻辣鲜香的川菜、湿润温和的气候，共同构筑了“天府之国”的独特魅力。今天的成都，正以公园城市的新面貌，把雪山下的诗意与烟火里的幸福融为一体，迎候四海宾朋的到来。</p>
+          <a href="sights.html" class="btn-gold">探索成都景点</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================= Footer 深色页脚 ======================= -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <!-- 品牌区 -->
+      <div class="footer-brand">
+        <a href="index.html" class="logo"><span class="logo-badge">蜀</span>蜀韵·成都</a>
+        <p>雪山下的公园城市，烟火里的幸福成都。<br>让世界看见成都，让成都走向世界。</p>
+      </div>
+      <!-- 快速导航 -->
+      <div class="footer-col">
+        <h4>快速导航</h4>
+        <ul>
+          <li><a href="index.html">首页</a></li>
+          <li><a href="food.html">食在成都</a></li>
+          <li><a href="sights.html">探秘成都</a></li>
+          <li><a href="culture.html">蜀韵天府</a></li>
+          <li><a href="travel.html">游玩攻略</a></li>
+        </ul>
+      </div>
+      <!-- 联系方式 -->
+      <div class="footer-col">
+        <h4>联系我们</h4>
+        <ul>
+          <li>地址：四川省成都市</li>
+          <li>电话：028-8888-8888</li>
+          <li>邮箱：hello@chengdu.travel</li>
+        </ul>
+      </div>
+    </div>
+    <!-- 版权区（年份由 JS 自动更新） -->
+    <div class="footer-bottom">
+      <p>© <span id="year"></span> <span class="gold-text">蜀韵·成都</span> 文化旅游宣传网 | 本网站仅用于学习展示</p>
+    </div>
+  </footer>
+
+  <!-- 全局脚本 -->
+  <script src="js/main.js"></script>
+</body>
+</html>

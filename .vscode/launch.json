@@ -1,0 +1,44 @@
+{
+  // ============================================================
+  // 蜀韵·成都 调试配置 (launch.json)
+  // 说明：这是一个纯静态网站，必须在本地 HTTP 服务器中访问。
+  // 按 F5 即可启动本地服务器并自动打开浏览器，有以下三种方式：
+  //   1) Python 服务器 + Chrome
+  //   2) Python 服务器 + Edge
+  //   3) 直接打开 index.html（file:// 方式，无需服务器，最简单）
+  // 提示：也可在资源管理器中右键 index.html → "Open with Live Server"
+  // ============================================================
+  "version": "0.2.0",
+  "configurations": [
+
+    // ---- 方式一：启动本地服务器，并用 Chrome 打开 ----
+    {
+      "name": "启动网站 (Chrome + Python 服务器)",
+      "type": "pwa-chrome",
+      "request": "launch",
+      "url": "http://localhost:8000/index.html",
+      "webRoot": "${workspaceFolder}",
+      // 启动调试前，先在后台运行 Python 静态服务器（见 tasks.json）
+      "preLaunchTask": "启动本地静态服务器"
+    },
+
+    // ---- 方式二：启动本地服务器，并用 Edge 打开 ----
+    {
+      "name": "启动网站 (Edge + Python 服务器)",
+      "type": "pwa-msedge",
+      "request": "launch",
+      "url": "http://localhost:8000/index.html",
+      "webRoot": "${workspaceFolder}",
+      "preLaunchTask": "启动本地静态服务器"
+    },
+
+    // ---- 方式三：不启动服务器，直接用默认浏览器打开 ----
+    {
+      "name": "直接打开 index.html (无需服务器)",
+      "type": "pwa-msedge",
+      "request": "launch",
+      "file": "${workspaceFolder}/index.html",
+      "webRoot": "${workspaceFolder}"
+    }
+  ]
+}

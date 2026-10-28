@@ -1,0 +1,44 @@
+{
+  // ============================================================
+  // 蜀韵·成都 任务配置 (tasks.json)
+  // 为 launch.json 提供"后台启动本地静态服务器"的后台任务，
+  // 使用 Python 自带模块 http.server，端口 8000。
+  // 若提示找不到 python，请将命令改为 py（Windows Python 启动器）。
+  // ============================================================
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "启动本地静态服务器",
+      "type": "process",
+      "command": "python",
+      "args": [
+        "-m",
+        "http.server",
+        "8000" // 本地服务器端口（与 launch.json 中的 url 对应）
+      ],
+      "options": {
+        // 以项目根目录为服务器根路径，保证相对路径 ./images 等可访问
+        "cwd": "${workspaceFolder}"
+      },
+      // 标记为后台任务：服务器会一直运行，直到调试结束
+      "isBackground": true,
+      // 通过匹配 Python 服务器的启动日志判断"等端口就绪再开浏览器"
+      "problemMatcher": {
+        "owner": "static-server",
+        "pattern": {
+          "regexp": "^\\s*$"
+        },
+        "background": {
+          "activeOnStart": true,
+          "beginsPattern": "Serving HTTP",
+          "endsPattern": "Serving HTTP"
+        }
+      },
+      "presentation": {
+        "reveal": "silent",   // 不弹出终端面板，避免打扰
+        "panel": "shared",    // 复用同一个服务器终端
+        "clear": true
+      }
+    }
+  ]
+}
